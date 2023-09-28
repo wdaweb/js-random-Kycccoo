@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // math.random()
+        // console.log(Math.random() * 100)
+        let a = Math.random() * 100
+        console.log(Math.floor(a))
+
+
+        for (let i = 0; i < 100; i++) {
+            let b = Math.random() * 100
+            b = Math.round(b)
+            console.log(b)
+        }
+
+        // fail
+        // const rand = (min, max) => {
+        //     let b = Math.random() * (max * 2)
+        //     let c = Math.random() * (min * 2)
+        //     let d = (b + c) / 2
+        //     // console.log(b)
+        //     return Math.round(d)
+        // }
+        // const result = rand(50, 100)
+        // console.log(result)
+
+        const rand = (min, max) => {
+            return Math.round(Math.random() * (max - min)) + min
+        }
+        for (let i = 0; i < 100; i++) {
+            console.log(rand(150, 200))
+        }
+    </script>
+</body>
+
+</html>
